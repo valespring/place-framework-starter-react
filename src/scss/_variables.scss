@@ -1,0 +1,34 @@
+// Custom variables to override Place Framework defaults
+// These variables will be used with the `with` keyword when importing Place Framework modules
+
+// Basic variables
+$transparent: rgba(255, 255, 255, 0);
+
+// Typography scale
+$type-scale: (
+	inch-type: 56_72,
+	canon-type: 42,
+	paragon-type: (
+		lg: 32_48,
+		md: 28_32,
+		sm: 24_28
+	),
+	primer-type: 28,
+	tertia-type: 22,
+	normal-type: 16_30,
+	petite-type: 14,
+	minion-type: 12
+);
+
+// Variables to export to JavaScript
+// These will be available in both JS export and framework configuration
+$custom-export-variables: (
+	// Add other variables you want to export:
+	 // 'large-columns': $large-columns,
+);
+
+// Forward the consolidated config with our overrides
+@forward '@place/framework/config' with (
+	$type-scale: $type-scale,
+	$transparent: $transparent
+);

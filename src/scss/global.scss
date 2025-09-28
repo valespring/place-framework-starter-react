@@ -1,0 +1,19 @@
+// Import custom variables with a namespace
+// The variables module now forwards place-config with our overrides
+@use 'variables' as vars;
+
+// Import From Place with customizations
+@use '@place/framework/functions';
+@use '@place/framework/mixins';
+
+// Framework Core Layer (includes normalize and placeholders)
+@use '@place/framework/core';
+
+// Build Layer (specific implementations)
+@use '@place/framework/grid';
+@use '@place/framework/modules';
+
+// Site-specific styles
+@use 'site/type';
+@use 'site/base';
+@use 'site/demo';

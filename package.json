@@ -1,0 +1,60 @@
+{
+  "name": "@place-framework/place-framework-starter-react",
+  "version": "3.0.0",
+  "description": "A React starter pack for the PLACE SCSS framework.",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development --env fix",
+    "dev:fix": "concurrently \"npm run dev\" \"npm run prettier:watch\"",
+    "format": "npm run prettier:fix && npm run lint:fix",
+    "lint:js": "npx eslint .",
+    "lint:js:debug": "DEBUG=eslint:flat-eslint,eslint:cli-engine npm run lint",
+    "lint:js:fix": "npm run lint -- --fix --format summary",
+    "lint:scss": "npx stylelint \"**/*.scss\"",
+    "lint:scss:fix": "npx stylelint --fix \"**/*.scss\"",
+    "prettier": "npx prettier \"**/*.scss\" --check",
+    "prettier:fix": "npm run prettier -- --write --ignore-unknown ",
+    "prettier:watch": "onchange \"**/*.scss\" -- npm run prettier:fix {{changed}}"
+  },
+  "keywords": [
+    "place framework",
+    "place framework starter react"
+  ],
+  "author": "Brian Kelley",
+  "license": "ISC",
+  "devDependencies": {
+    "@place-framework/place-framework": "^3.0.1",
+    "@place-framework/place-webpack-preset": "^3.0.0",
+    "@types/node": "^24.3.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "concurrently": "^8.2.2",
+    "css-loader": "^7.1.2",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.9.1",
+    "onchange": "^7.1.0",
+    "postcss-loader": "^8.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.1",
+    "sass-loader": "^16.0.1",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.9.2",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4",
+    "webpack-merge": "^6.0.1"
+  },
+  "peerDependencies": {
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.9.1",
+    "eslint-formatter-summary": "^1.0.2",
+    "postcss": "^8.4.41",
+    "sass": "^1.77.8",
+    "stylelint": "^16.8.2"
+  }
+}
