@@ -1,6 +1,6 @@
 {
   "name": "@place-framework/place-framework-starter-react",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "A React starter pack for the PLACE SCSS framework.",
   "scripts": {
     "build": "webpack --mode production",
@@ -23,8 +23,8 @@
   "author": "Brian Kelley",
   "license": "ISC",
   "devDependencies": {
-    "@place-framework/place-framework": "^3.0.1",
-    "@place-framework/place-webpack-preset": "^3.0.1",
+    "@place-framework/place-framework": "^3.0.2",
+    "@place-framework/place-webpack-preset": "^3.0.2",
     "@types/node": "^24.3.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
