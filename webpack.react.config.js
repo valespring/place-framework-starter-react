@@ -9,6 +9,12 @@ module.exports = {
 	entry: {
 		main: path.resolve(__dirname, APP_CONFIG.PATH.ENTRY)
 	},
+	devServer: {
+		static: {
+			directory: path.resolve(__dirname, 'src/public'),
+			publicPath: '/'
+		}
+	},
 	module: {
 		rules: [
 			// TypeScript loader (React-specific, no Vue suffix handling)
@@ -52,6 +58,7 @@ module.exports = {
 			'@img': path.resolve(__dirname, APP_CONFIG.PATH.SRC_IMAGES),
 			'@scss': path.resolve(__dirname, APP_CONFIG.PATH.SRC_SCSS),
 			'@views': path.resolve(__dirname, APP_CONFIG.PATH.SRC_VIEWS),
-		}
+		},
+		symlinks: false
 	}
 };
